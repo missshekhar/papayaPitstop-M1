@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papaya Pitstop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Papaya Pitstop</h1>
+        
+        <div class="form-container">
+
+            <div class="form-group">
+                <label for="laps">Number of Laps:</label>
+                <input type="number" id="laps" min="1" value="50">
+            </div>
+    
+            <div class="form-group">
+                <label for="degradation">Tire Degradation:</label>
+                <select id="degradation">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="weather">Weather Conditions:</label>
+                <select id="weather">
+                    <option value="dry">Dry</option>
+                    <option value="damp">Damp</option>
+                    <option value="wet">Wet</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="pitStopNormal">Pit Stop Time Loss (Normal):</label>
+                <input type="number" id="pitStopNormal" value="22">
+            </div>
+    
+            <div class="form-group">
+                <label for="pitStopSC">Pit Stop Time Loss (Safety Car):</label>
+                <input type="number" id="pitStopSC" value="18">
+            </div>
+    
+            
+            <div class="form-group">
+                <label for="startTire">Starting Tire:</label>
+                <select id="startTire">
+                    <option value="soft">Soft</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="wet">Wets</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="risk">Strategy Risk:</label>
+                <select id="risk">
+                    <option value="safe">Safe</option>
+                    <option value="balanced">Balanced</option>
+                    <option value="risky">Risky</option>
+                </select>
+            </div>
+    
+            <button id="generateStrategy">Generate Strategy</button>
+    
+            <h2>Strategy Results:</h2>
+            <div id="strategyResults"></div>
+            <div id="loadingMessage" style="display:none;">Calculating strategy, please wait...</div>
+            <div id="errorMessage" style="display:none;color:red;">An error occurred while generating the strategy. Please try again.</div>
+            <h2>Final Time: <span id="finalTime"></span></h2>
+
+
+
+
+
+
+
+        </div>
+        
+    </div>
+
+</body>
+</html>
